@@ -1,6 +1,41 @@
-AI Data Analyst Agent
-This project is a Streamlit-based application designed to perform intelligent data analysis on CSV and Excel files using natural language queries. The project allows users to upload datasets, preview the data, and ask analytical questions such as filtering values, calculating summaries, or understanding trends, all through an easy-to-use interface. The application is powered by a locally hosted Large Language Model (LLaMA 3.2) using Ollama, enabling completely offline execution without the need for any paid APIs or internet-based AI services. This makes the system both cost-effective and privacy-friendly while still delivering powerful analytical capabilities.
+# AI Data Analyst Agent
 
-The application is built using Python, Streamlit, and Pandas, with Ollama serving as the local inference engine through an OpenAI-compatible API interface. Once a dataset is uploaded, the system automatically processes and displays it, after which users can interact with the data using natural language queries. The model interprets the question, analyzes the dataset, and returns accurate responses such as counts, summaries, or explanations. Since the entire workflow runs locally, the tool avoids API rate limits, billing issues, and network dependency, making it ideal for learning, experimentation, and deployment in restricted environments.
+Upload any CSV or Excel file and ask questions about it in plain English — 
+no SQL, no code required.
 
-This project demonstrates practical integration of AI with data analytics, highlighting skills in Python programming, data handling, LLM integration, and UI development. It is suitable for use in academic projects, internships, and portfolio demonstrations, and can be extended further to include data visualization, SQL-style querying, report generation, or multi-file analysis. Overall, the AI Data Analyst Agent showcases how modern language models can be effectively used for real-world data analysis in a lightweight and fully offline setup.
+## Live Demo
+🔗 [Try it here](https://analytllm.streamlit.app)
+
+![App Screenshot](screenshot.png)
+
+## Features
+- Natural language querying over any tabular dataset
+- Supports CSV and Excel formats
+- Auto-displays row count, column count, and missing values
+- Powered by LLaMA 3.3 via Groq API
+
+## Tech Stack
+Python · Streamlit · Pandas · Groq API · LLaMA 3.3
+
+## Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run ai_data_analyst.py
+```
+
+For local version, install [Ollama](https://ollama.com) and run:
+```bash
+ollama pull llama3.2:3b
+ollama serve
+```
+
+## Example Questions
+- *"What is the average age in this dataset?"*
+- *"Which column has the most missing values?"*
+- *"How many rows have sales greater than 1000?"*
+
+## Future Improvements
+- [ ] Auto-generate charts from query results
+- [ ] SQL-style query support
+- [ ] Multi-file analysis
+- [ ] Export answers to PDF
